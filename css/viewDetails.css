@@ -1,0 +1,68 @@
+body {
+  background-color: #1e1e1e;
+}
+
+p {
+  font-family: "Baloo 2", cursive;
+  width: 700px;
+  color: white;
+}
+
+.display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+a {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  font-family: "Baloo 2", cursive;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+a:before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% - 12px);
+  background: #1e1e1e;
+  transition: 0.5s ease-in-out;
+  transition-delay: 0.5s;
+  transform: scaleY(1);
+}
+
+a:hover:before {
+  transform: scaleY(0);
+}
+
+a:after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: -2px;
+  height: calc(100% + 4px);
+  width: calc(100% - 12px);
+  background: #1e1e1e;
+  transition: 0.5s ease-in-out;
+  transform: scaleX(1);
+}
+
+a:hover:after {
+  transform: scaleX(0);
+}
+
+a span {
+  position: relative;
+  z-index: 3;
+}
