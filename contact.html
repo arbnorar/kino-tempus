@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/contact.css" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/contact.js"></script>
+  </head>
+  <body>
+    <a href="#"><span>Go Back</span></a>
+    <div class="wrapper">
+      <h2 style="color: #ffffff;">Do you have any questions or concerns?</h2>
+      <h1 style="color: #ffffff;">Get in touch</h1>
+        
+      <form action="" method="POST" onsubmit="return formValidation()">
+        <div class="top-form">
+          <div class="inner-form">
+            <label for="name" style="color: #ffffff;">Name:</label>
+            <input type="text" id="name" name="name"/>
+          </div>
+          <div class="inner-form">
+            <label for="phoneNumber" style="color: #ffffff;"
+              >Phone Number:</label
+            >
+            <input type="number" id="phoneNumber" name="phone_number" />
+          </div>
+          <div class="inner-form">
+            <label for="emailAddress" style="color: #ffffff;"
+              >Email address:</label
+            >
+            <input type="text" id="emailAddress" name="email_address" />
+          </div>
+        </div>
+        <div class="bottom-form">
+            <div class="inner-form">
+          <label for="message" style="color: #ffffff;">Your message:</label>
+          <textarea name="msg" id="message"></textarea>
+        </div>
+        </div>
+        <div id="error_message"></div>
+
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>
