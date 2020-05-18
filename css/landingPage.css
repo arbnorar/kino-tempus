@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../images/wallpaper.jpg");
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+img {
+  height: fit-content;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 80px;
+  font-family: "Permanent Marker", cursive;
+  color: #c24e00;
+}
+
+a {
+  background-color: #c24e00;
+  border: none;
+  color: #ffffff !important;
+  font-size: 18px;
+  font-weight: bold !important;
+  padding: 20px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+  outline: none;
+  text-decoration: none;
+  font-family: "Baloo 2", cursive;
+}
+
+a:hover {
+  color: #ffffff !important;
+  font-weight: bold !important;
+  letter-spacing: 2px;
+  background: #1c1c1c;
+  transition: all 0.3s ease 0s;
+}

@@ -1,5 +1,5 @@
 body {
-  background-color: #1e1e1e;
+  background-color: #151515;
 }
 
 p {
@@ -36,7 +36,7 @@ a:before {
   left: -2px;
   width: calc(100% + 4px);
   height: calc(100% - 12px);
-  background: #1e1e1e;
+  background: #151515;
   transition: 0.5s ease-in-out;
   transition-delay: 0.5s;
   transform: scaleY(1);
@@ -53,7 +53,7 @@ a:after {
   top: -2px;
   height: calc(100% + 4px);
   width: calc(100% - 12px);
-  background: #1e1e1e;
+  background: #151515;
   transition: 0.5s ease-in-out;
   transform: scaleX(1);
 }
