@@ -64,9 +64,11 @@ ul li a {
   height: 45px;
   outline: none;
   background-color: #c4c4c4;
+  border-radius: 2px;
   font-size: 16px;
   padding-left: 5px;
   font-family: "Baloo 2", cursive;
+  border: none;
 }
 
 .inner-form textarea {
@@ -77,6 +79,8 @@ ul li a {
   background-color: #c4c4c4;
   font-size: 16px;
   font-family: "Baloo 2", cursive;
+  border: none;
+  border-radius: 2px;
 }
 
 .form {
@@ -108,15 +112,9 @@ input[type="submit"]:hover {
   background-color: #0c2434;
 }
 
-#error_message {
-  color: #ffff;
-  background-color: #d50000;
-  border-radius: 10px;
-}
-
 .error {
-  color: red;
-  font-size: 14px;
+  color: #ea2d2e;
+  font-size: 16px;
   margin-top: 4px;
 }
 
