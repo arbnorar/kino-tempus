@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/login.css">
     <script src="js/login.js"></script>
-    <title>Document</title>
+    <title>Login</title>
   </head>
   <body>
     <div class="container">
-      <form action="" method="POST" class='form' onsubmit="return validateForm()">
+      <form action="" method="POST" class='form' onsubmit="return validateLogin()">
         <h1 style="text-align:center">Login</h1>
         <div class="input-group">
           <label for="email">Email:</label>

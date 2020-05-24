@@ -1,4 +1,4 @@
-function validateForm() {
+function validateLogin() {
   var email = document.getElementById("email")
   var password = document.getElementById("password")
 
