@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <?php include "includes/menu.php"; ?>
+  <?php include "includes/menu.php";?>
   <div class="wrapper">
     <div style="margin-bottom: 70px;">
       <h1 style="color: #ffffff;">Contact Us</h1>

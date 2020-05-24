@@ -90,7 +90,6 @@ ul li a {
 }
 
 input[type="submit"] {
-  background-color: rgb(151, 106, 85);
   margin: 12px 0;
   align-self: stretch;
   padding: 10px 0;
@@ -99,7 +98,7 @@ input[type="submit"] {
   cursor: pointer;
   font-size: 18px;
   font-weight: bold;
-  background: #4d696b;
+  background-color: #4d696b;
   border: none;
   color: #fff;
   border-radius: 3px;

@@ -6,12 +6,11 @@ function formValidation() {
   var nameError = document.getElementById("name-error")
   var emailError = document.getElementById("email-error")
   var messageError = document.getElementById("message-error")
+  var errorColor = "#EA2D2E"
 
   var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
 
   var emailRegex = new RegExp(re)
-
-  var errorColor = "#EA2D2E"
 
   var valid = true
 
