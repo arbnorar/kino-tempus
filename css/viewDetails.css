@@ -66,3 +66,7 @@ a span {
   position: relative;
   z-index: 3;
 }
+
+img {
+  width: 500px;
+}

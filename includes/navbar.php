@@ -9,13 +9,12 @@
 <body>
   <div class="navbar">
     <ul>
-      <li style="color: #A682FF;">
+      <li class="<?= $pageName == "comingSoon.php"? 'active': '' ?>">
         <a href="comingSoon.php">Coming Soon</a>
       </li>
-      <li style="color: #5d49b3;"><a href="home.php">Home</a></li>
-      <li style="color: #A682FF;"><a href="contact.php">Contact Us</a></li>
+      <li class="<?= $pageName == "home.php"? 'active': '' ?>"><a href="home.php">Home</a></li>
+      <li class="<?= $pageName == "contact.php"? 'active': '' ?>"><a href="contact.php">Contact Us</a></li>
     </ul>
   </div>
-  
 </body>
 </html>
