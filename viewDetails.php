@@ -26,7 +26,7 @@
   <body>
     <a href="home.php"><span>Go Back</span></a>
     <div class="display">
-      <img src="<?php echo $movie['image']; ?>" />
+      <img src="images/movies/<?php echo $movie['image']; ?>" />
       <p>
        <?php echo $movie['description']; ?>
       </p>

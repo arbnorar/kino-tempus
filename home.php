@@ -1,10 +1,12 @@
 <?php
+  include 'controllers/MoviesController.php';
+  $moviesController = new MoviesController();
+
 
   $pageName = "home.php";
   require "includes/db.php";
 
-  $query = $pdo->query("SELECT * from movies");
-  $movies = $query->fetchAll();
+  $movies = $moviesController->findAll();
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +25,7 @@
 
     <?php foreach ($movies as $movie): ?>
       <div class="movie">
-        <img src="<?php echo $movie['image']; ?>" class="images" />
+        <img src="images/movies/<?php echo $movie['image']; ?>" class="images" />
         <div class="buttons">
           <a href="viewDetails.php?id=<?php echo $movie['id'] ?>" class="movie-btn btn-left">View Details</a>
           <a href="#" class="movie-btn btn-right">Buy a Ticket</a>
