@@ -1,3 +1,12 @@
+<?php 
+  include 'controllers/AuthController.php';
+  $authController = new AuthController;
+
+  if(isset($_POST['submit'])){
+    $authController->login($_POST);
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,7 +31,7 @@
           <p id="password-error" class="error"></p>
         </div>
         <div class="input-group">
-          <button type="submit" class="button">Login</button>
+          <button type="submit" class="button" name="submit">Login</button>
         </div>
       </form>
     </div>

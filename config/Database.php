@@ -5,10 +5,10 @@ class Database{
   public function __construct(){
     try{
       session_start();
-      $link = new PDO('mysql:host=localhost;dbname=kino-tempus', 'root', 'root');
+      $link = new PDO("mysql:host=localhost;dbname=kino-tempus", "root", "");
       $this->pdo = $link;
     }catch(PDOException $err){
-      die('DIE'.$e->getMessage());
+      die('DIE'.$err->getMessage());
     }
   }
 }

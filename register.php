@@ -1,3 +1,13 @@
+<?php 
+  include 'controllers/UsersController.php';
+  $usersController = new UsersController();
+
+  if(isset($_POST['submit'])){
+    $usersController->register($_POST);
+  }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +19,13 @@
 </head>
 <body>
   <div class="container">
-    <form action="" class="form" method="POST" onsubmit='return validateRegister()'>
+    <form action="register.php" class="form" method="POST" onsubmit='return validateRegister()'>
       <h1 style="text-align: center">Register</h1>
+      <div class="input-group">
+        <label for="username">Username:</label>
+        <input id="username" type="text" class="input" placeholder="Username" name='username' >
+        <p class="error" id="username-error"></p>
+      </div>
       <div class="input-group">
         <label for="email">Email:</label>
         <input id="email" type="text" class="input" placeholder="Email" name='email' >
@@ -26,7 +41,7 @@
         <input id="password-confirm" type="password" class="input" placeholder="Confirm Password" name="password-confirm" >        
       </div>
       <div class="input-group">
-        <button type='submit' class="button">Register</button>
+        <button type='submit' class="button" name="submit">Register</button>
       </div>
     </form>
   </div>

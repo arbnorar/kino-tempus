@@ -1,10 +1,9 @@
 <?php
+
   include 'controllers/MoviesController.php';
   $moviesController = new MoviesController();
 
-
   $pageName = "home.php";
-  require "includes/db.php";
 
   $movies = $moviesController->findAll();
 ?>
@@ -22,7 +21,6 @@
   <?php require "includes/navbar.php"; ?>
   <div class="container">
     <div class="movies">
-
     <?php foreach ($movies as $movie): ?>
       <div class="movie">
         <img src="images/movies/<?php echo $movie['image']; ?>" class="images" />
