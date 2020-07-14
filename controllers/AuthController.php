@@ -27,8 +27,5 @@ class AuthController
     }
   }
 
-  public function logout(){
-    $_SESSION->end();
-  }
 }
 ?>
