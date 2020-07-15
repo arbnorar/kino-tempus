@@ -2,6 +2,10 @@
   include 'controllers/UsersController.php';
   $usersController = new UsersController();
 
+  if(isset($_SESSION['username'])){
+    header("Location: home.php");
+  }
+
   if(isset($_POST['submit'])){
     $usersController->register($_POST);
   }
@@ -15,12 +19,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/register.css">
+  <link rel="stylesheet" href="css/carousel.css" type="text/css" />
   <script src="js/register.js"></script>
   <title>Register</title>
 </head>
 
 <body>
   <div class="container">
+
     <form action="register.php" class="form" method="POST" onsubmit='return validateRegister()'>
       <h1 style="text-align: center">Register</h1>
       <div class="input-group">
@@ -45,8 +51,10 @@
       </div>
       <div class="input-group">
         <button type='submit' class="button" name="submit">Register</button>
+        <a href="login.php">Already have an account? Login!</a>
       </div>
     </form>
+    <?php include 'includes/carousel.php'; ?>
   </div>
 </body>
 

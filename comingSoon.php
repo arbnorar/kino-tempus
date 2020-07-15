@@ -3,8 +3,14 @@
   $moviesController = new MoviesController();
 
   $pageName = "comingSoon.php";
+  
+  if(!isset($_SESSION["user"])) {
+    header("Location: login.php");
+  }
 
   $movies = $moviesController->findComingSoon();
+
+  
 ?>
 
 <!DOCTYPE html>
@@ -19,6 +25,7 @@
 
 <body>
   <?php include "includes/navbar.php"; ?>
+  <?php include "includes/logoutBtn.php"; ?>
   <div class="container">
     <div class="movies">
       <?php foreach ($movies as $movie): ?>

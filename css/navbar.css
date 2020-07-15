@@ -9,13 +9,15 @@ ul {
   justify-content: space-around;
   margin: 30px 0 60px 0;
 }
+
 ul li {
   color: #a682ff;
   list-style-type: none;
-  font-family: "Baloo 2", cursive;
+  font-family: 'IBM Plex Sans', sans-serif;
   font-size: 18px;
   text-align: center;
 }
+
 ul li a {
   text-decoration: none;
   color: inherit;

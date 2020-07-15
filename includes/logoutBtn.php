@@ -20,6 +20,10 @@
         .my-float {
             margin-top: 18px;
         }
+
+        .float:hover {
+            background-color: #F22A18;
+        }
     </style>
 </head>
 

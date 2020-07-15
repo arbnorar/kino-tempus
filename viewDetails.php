@@ -4,6 +4,9 @@
 
   if(isset($_GET['id'])){
     $id = $_GET['id'];
+
+  }else {
+    header("Location: home.php");
   }
 
   $movie = $moviesController->getMovieDetails($id);

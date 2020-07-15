@@ -15,9 +15,9 @@ body {
   width: 100%;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+
 }
 
 .form {
@@ -78,4 +78,13 @@ body {
   .form {
     width: 400px;
   }
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }

@@ -44,5 +44,15 @@ class UsersController{
 
     return;
   }
+
+  public function addMessage($request){
+    $query = $this->db->pdo->prepare('INSERT into messages (name, phoneNumber, email, content) VALUES (:name, :phoneNumber, :email, :content)');
+    $query->bindParam(':name', $request['name']);
+    $query->bindParam(':phoneNumber', $request['phoneNumber']);
+    $query->bindParam(':email', $request['email']);
+    $query->bindParam(':content', $request['content']);
+
+    $query->execute();
+  }
 }
 ?>

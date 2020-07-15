@@ -1,10 +1,16 @@
-body{
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+body {
   background-color: #151515;
   color: white;
   font-family: 'IBM Plex Sans', sans-serif;
 }
 
-.container{
+.container {
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -13,7 +19,7 @@ body{
   align-items: center;
 }
 
-#addMovie{
+#addMovie {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -37,11 +43,11 @@ body{
   font-size: 16px;
   margin: 10px 0;
   padding-left: 5px;
-  font-family: "Baloo 2", cursive;
+  font-family: 'IBM Plex Sans', sans-serif;
   border: none;
 }
 
-.inputFile{
+.inputFile {
   width: 0.1px;
   height: 0.1px;
   opacity: 0;
@@ -50,7 +56,7 @@ body{
   z-index: -1;
 }
 
-.inputFile + label{
+.inputFile+label {
   margin: 10px 0;
   display: inline-block;
   vertical-align: middle;
@@ -67,14 +73,14 @@ body{
   cursor: pointer;
 }
 
-.input-group textarea{
+.input-group textarea {
   height: 120px;
   outline: none;
   padding: 5px 5px;
   resize: none;
   background-color: #c4c4c4;
   font-size: 16px;
-  font-family: "Baloo 2", cursive;
+  font-family: 'IBM Plex Sans', sans-serif;
   border: none;
   border-radius: 2px;
 }
@@ -85,7 +91,7 @@ body{
   cursor: pointer;
 }
 
-#status{
+#status {
   width: 100%;
   height: 45px;
   border: none;
@@ -93,7 +99,7 @@ body{
   background-color: #c4c4c4;
 }
 
-button{
+button {
   display: inline-block;
   vertical-align: middle;
   text-align: center;
@@ -109,7 +115,7 @@ button{
   cursor: pointer;
 }
 
-button:hover{
+button:hover {
   background-color: #1F332E;
   cursor: pointer;
 }

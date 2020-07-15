@@ -1,7 +1,13 @@
 <?php 
-
+  $pageName = "addMovie.php";
+  
   include 'controllers/MoviesController.php';
   $moviesController = new MoviesController();
+
+  if(isset($_SESSION["role"]) && $_SESSION['role'] != 1) {
+    header("Location: home.php");
+}
+
   if(isset($_FILES['image']) && isset($_POST["submit"])){
     //pre_r($_FILES);
 
@@ -50,6 +56,7 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,28 +65,33 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 </head>
+
 <body>
+  <?php require 'includes/logoutBtn.php' ?>
+  <?php require "includes/navbar.php"; ?>
   <div class="container">
     <h1>Add Movie</h1>
     <form id="addMovie" action="" method="POST" enctype="multipart/form-data">
       <div class="input-group">
-      <label for="title">Title:</label>
-        <input id="title" class='input' type="text" name="title" required>
+        <label for="title">Title:</label>
+        <input id="title" class='input' type="text" name="title" required placeholder="Title">
       </div>
 
       <div class="input-group">
-      <label for="description">Description:</label>
-        <textarea id="description" class="input" type="textarea" name="description" required></textarea>
+        <label for="description">Description:</label>
+        <textarea id="description" class="input" type="textarea" name="description" required
+          placeholder="Description"></textarea>
       </div>
-      
+
       <div class="input-group">
         <label for="">Image: </label>
-        <input id="image" class="inputFile" type="file" name="image" data-multiple-caption="{count} files selected" required>
+        <input id="image" class="inputFile" type="file" name="image" data-multiple-caption="{count} files selected"
+          required>
         <label id="fileLabel" for="image"><span class="material-icons">insert_photo</span></label>
       </div>
-      
+
       <div class="input-group">
-      <label for="status">Status:</label>
+        <label for="status">Status:</label>
         <select id="status" name="status" required>
           <option value="out-now">Out Now</option>
           <option value="coming-soon">Coming Soon</option>
@@ -93,24 +105,26 @@
   </div>
   <script>
     var input = document.getElementById('image')
-    var label = document.getElementById('fileLabel'), labelVal = label.innerHTML;
- 
-    
-    input.addEventListener('change', (e) =>{
+    var label = document.getElementById('fileLabel'),
+      labelVal = label.innerHTML;
+
+
+    input.addEventListener('change', (e) => {
       var fileName = '';
-      if(this.files && this.files.length > 1){
-        fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
-      }else{
+      if (this.files && this.files.length > 1) {
+        fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
+      } else {
         fileName = e.target.value.split('\\').pop();
       }
 
-      if(fileName){
+      if (fileName) {
         label.innerHTML = fileName
-      }else{
+      } else {
         label.innerHTML = labelVal
       }
 
     })
   </script>
 </body>
+
 </html>

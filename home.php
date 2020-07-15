@@ -2,6 +2,9 @@
 
   include 'controllers/MoviesController.php';
   $moviesController = new MoviesController();
+  if(!isset($_SESSION["username"])) {
+    header("Location: login.php");
+  }
 
   $pageName = "home.php";
 

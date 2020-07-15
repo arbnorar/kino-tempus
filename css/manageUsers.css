@@ -1,13 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
 body {
     background-color: #151515;
     color: white;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+
 }
 
 
 #usersTable {
     font-family: 'IBM Plex Sans', sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 80%;
 }
 
 #usersTable td,
@@ -38,9 +52,15 @@ body {
     transition-duration: 0.3s;
     width: 120px;
 
+
 }
 
 .adminBtn:hover {
     background-color: #1F332E;
     cursor: pointer;
+}
+
+#usersTable form {
+    display: flex;
+    justify-content: center;
 }
