@@ -27,7 +27,6 @@
         <img src="images/movies/<?php echo $movie->image; ?>" class="images" />
         <div class="buttons">
           <a href="viewDetails.php?id=<?php echo $movie->id ?>" class="movie-btn btn-left">View Details</a>
-
         </div>
       </div>
       <?php endforeach; ?>

@@ -1,0 +1,115 @@
+body{
+  background-color: #151515;
+  color: white;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.container{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#addMovie{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+
+}
+
+.input-group {
+  margin: 30px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  height: 45px;
+  outline: none;
+  background-color: #c4c4c4;
+  border-radius: 2px;
+  font-size: 16px;
+  margin: 10px 0;
+  padding-left: 5px;
+  font-family: "Baloo 2", cursive;
+  border: none;
+}
+
+.inputFile{
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.inputFile + label{
+  margin: 10px 0;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+  background: #5d49b3;
+  border: none;
+  color: #fff;
+  border-radius: 3px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+.input-group textarea{
+  height: 120px;
+  outline: none;
+  padding: 5px 5px;
+  resize: none;
+  background-color: #c4c4c4;
+  font-size: 16px;
+  font-family: "Baloo 2", cursive;
+  border: none;
+  border-radius: 2px;
+}
+
+
+#fileLabel:hover {
+  background-color: #433582;
+  cursor: pointer;
+}
+
+#status{
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-radius: 4px;
+  background-color: #c4c4c4;
+}
+
+button{
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+  background: #365950;
+  border: none;
+  color: #fff;
+  border-radius: 3px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: #1F332E;
+  cursor: pointer;
+}
