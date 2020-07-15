@@ -9,7 +9,7 @@ class UsersController{
   }
 
   public function findAll(){
-    $query = $this->db->pdo->query('SELECT * from users');
+    $query = $this->db->pdo->query('SELECT id, username, email, role from users');
     return $query->fetchAll();
   }
 
@@ -25,6 +25,24 @@ class UsersController{
     $query->execute();
 
     return header('Location: ./login.php');
+  }
+
+  public function makeAdmin($userId){
+    $query = $this->db->pdo->prepare('UPDATE users SET role = 1 WHERE id = :userId');
+    $query->bindParam(':userId', $userId);
+    
+    $query->execute();
+
+    return;
+  }
+
+  public function removeAdmin($userId){
+    $query = $this->db->pdo->prepare('UPDATE users SET role = 0 WHERE id = :userId');
+    $query->bindParam(':userId', $userId);
+    
+    $query->execute();
+
+    return;
   }
 }
 ?>

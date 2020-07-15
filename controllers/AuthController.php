@@ -18,14 +18,13 @@ class AuthController
 
     $user = $query->fetch();
 
-    if(count($user) > 0 && password_verify($request['password'], $user['password'])){
-      $_SESSION['userId'] = $user['id'];
-      $_SESSION['username'] = $user['username'];
-      $_SESSION['role'] = $user['role'];
+    if($user && password_verify($request['password'], $user->password)){
+      $_SESSION['userId'] = $user->id;
+      $_SESSION['username'] = $user->username;
+      $_SESSION['role'] = $user->role;
 
       header('Location: ./home.php');
     }
   }
-
 }
 ?>

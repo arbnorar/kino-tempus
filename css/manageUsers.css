@@ -1,0 +1,46 @@
+body {
+    background-color: #151515;
+    color: white;
+}
+
+
+#usersTable {
+    font-family: 'IBM Plex Sans', sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#usersTable td,
+#usersTable th {
+    border: 1px solid #292929;
+    padding: 8px;
+}
+
+
+#usersTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #0c2434;
+    color: white;
+}
+
+.adminBtn {
+    text-align: center;
+    padding: 6px;
+    font-size: 14px;
+    background: #365950;
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    transition-duration: 0.3s;
+    width: 120px;
+
+}
+
+.adminBtn:hover {
+    background-color: #1F332E;
+    cursor: pointer;
+}

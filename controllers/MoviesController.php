@@ -9,8 +9,22 @@ class MoviesController{
   }
 
   public function findAll(){
-    $query = $this->db->pdo->query('SELECT * from movies');
+    $query = $this->db->pdo->query('SELECT * FROM movies');
     return $query->fetchAll();
+  }
+
+  public function findOutNow(){
+    $query = $this->db->pdo->query("SELECT * FROM movies WHERE status = 'out-now '");
+    return $query->fetchAll();
+  }
+
+
+
+
+  public function findComingSoon() {
+    $query = $this->db->pdo->query("SELECT * FROM movies WHERE status = 'coming-soon'");
+    return $query->fetchAll();
+    
   }
 
   public function getMovieDetails($id){
@@ -30,6 +44,15 @@ class MoviesController{
     $schedules = $query->fetchAll();
     return $schedules;
   }
+ 
+  public function addSchedule($movieId, $request) {
+    $query = $this->db->pdo->prepare('INSERT INTO schedules (movieId, date, time) VALUES (:movieId, :date, :time)');
+    $query->bindParam(':movieId', $movieId);
+    $query->bindParam(':date', $request['date']);
+    $query->bindParam(':time', $request['time']);
+    $query->execute();
+    
+    return header("Location: ./viewDetails.php?id=$movieId");
+  }
 }
-
 ?>

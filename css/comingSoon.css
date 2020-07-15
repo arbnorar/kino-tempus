@@ -1,5 +1,6 @@
 body {
   background-color: #151515;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 ul {
@@ -7,6 +8,7 @@ ul {
   justify-content: center;
   margin-bottom: 100px;
 }
+
 ul li {
   height: fit-content;
   display: inline-block;
@@ -14,7 +16,7 @@ ul li {
   align-items: center;
   margin-left: 60px;
   margin-right: 60px;
-  font-family: "Baloo 2", cursive;
+
   font-size: 22px;
 }
 
@@ -51,7 +53,7 @@ ul li a {
   height: 35px;
   font-size: 14px;
   font-weight: bold;
-  background: #c59b76;
+  background: #365950;
   border: 1px solid #000000;
   color: #000000;
   outline: none;
@@ -65,9 +67,9 @@ button a {
 }
 
 .details-btn:hover {
-  background-color: #744e3b;
+  background-color: #1F332E;
 }
 
 .ticket-btn:hover {
-  background-color: #744e3b;
+  background-color: #1F332E;
 }
